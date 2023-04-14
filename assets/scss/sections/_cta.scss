@@ -1,0 +1,106 @@
+/*-----------------------------------------------CTA STLYES-----------------------------------------------*/
+#cta-section {
+    // padding: 40px 0;
+    margin: 100px 0 50px;
+    background-image: url(../img/bg/deg-bg.jpg);
+    background-repeat: repeat;
+    background-size: 500px;
+    position: relative;
+    z-index: 1;
+
+    > .container > .row {
+        row-gap: 25px;
+    }
+
+    @include xs {
+        text-align: center;
+    }
+
+    &::before {
+        @include before;
+        z-index: -1;
+        opacity: 92%;
+        @include gradient-secondary-x;
+    }
+
+    .btn-custom-1 {
+        background: var(--white);
+        color: var(--secondary-clr);
+
+        &:hover {
+            color: var(--white);
+        }
+
+        @include xxs {
+            line-height: 37px;
+        }
+    }
+
+    &.subs-sction {
+        padding: 60px 0;
+        margin: 0;
+    }
+}
+
+.cta-img {
+    margin-bottom: -50px;
+    margin-top: -100px;
+    img {
+        max-width: 80%;
+    }
+}
+
+.cta-title {
+    margin-top: -8px;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.subs-title {
+    margin-bottom: 0;
+}
+
+#subs-form {
+    position: relative;
+
+    .btn-custom-1 {
+        padding: 0 20px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 45px;
+        line-height: 1.8;
+        font-size: 16px;
+        background: var(--secondary-clr);
+        color: var(--white);
+
+        @include xs {
+            position: static;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}
+
+#subs-mail {
+    width: 100%;
+    background: #dfdfdf;
+    padding: 0px 20px;
+    padding-right: 130px;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    color: #545454;
+    margin-bottom: 0;
+    height: 45px;
+    border: none;
+    outline: 2px solid transparent;
+
+    @include xs {
+        margin-bottom: 15px;
+        padding-right: 20px;
+    }
+
+    &:focus {
+        outline: 2px solid var(--secondary-clr);
+    }
+}

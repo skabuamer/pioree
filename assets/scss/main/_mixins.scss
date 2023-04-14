@@ -1,0 +1,20 @@
+@mixin gradient-primary-x {
+    background-image: linear-gradient(to right bottom, var(--primary-clr), var(--secondary-clr));
+}
+
+@mixin gradient-secondary-x {
+    background-image: linear-gradient(to left top, var(--primary-clr), var(--secondary-clr));
+}
+
+@mixin gradient-primary-y {
+    background-image: linear-gradient(to top, var(--primary-clr), var(--secondary-clr));
+}
+
+@mixin before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

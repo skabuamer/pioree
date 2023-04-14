@@ -1,0 +1,74 @@
+/*-----------------------------------------------BLOG STLYES-----------------------------------------------*/
+#blog-section {
+    > .container {
+        & > .row {
+            row-gap: 35px;
+            justify-content: center;
+
+            & > * {
+                padding: 0 15px;
+            }
+        }
+    }
+}
+
+.single-blog {
+    &__img {
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+
+    &__title {
+        text-transform: capitalize;
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-size: 22px;
+        color: var(--primary-clr);
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding-bottom: 13px;
+        border-bottom: 1px solid rgb(0 0 0 / 12%);
+    }
+
+    &__author,
+    &__date {
+        text-transform: capitalize;
+        font-weight: 400;
+        color: var(--primary-clr);
+        color: #919191;
+        font-family: var(--font-primary);
+        font-size: 14px;
+
+        i {
+            margin-right: 5px;
+        }
+    }
+
+    &__txt {
+        margin-bottom: 9px;
+        color: #898989;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        overflow: hidden;
+        font-family: var(--font-secondary);
+    }
+}
+
+.btn-custom-3 {
+    text-transform: capitalize;
+    color: #47504c;
+    text-decoration: underline;
+    font-weight: 400;
+
+    &:hover {
+        color: var(--primary-clr);
+    }
+}

@@ -1,0 +1,229 @@
+/*-----------------------------------------------TESTIMONIAL STLYES-----------------------------------------------*/
+#testimonial-section {
+    background: url(../img/bg/deg-bg.jpg) center center repeat;
+    background-size: contain;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        @include before;
+        @include gradient-primary-y;
+        opacity: 92%;
+        z-index: -1;
+    }
+
+    > .container > .row {
+        @include md {
+            row-gap: 50px;
+        }
+    }
+
+    .section-heading {
+        margin-bottom: 0;
+        text-align: left;
+        margin-right: 70px;
+        padding-bottom: 0;
+
+        @include md {
+            text-align: center;
+            margin-right: 0;
+        }
+
+        &::before,
+        &::after {
+            content: none;
+        }
+
+        span.section-subtitle {
+            color: #dfdfdf;
+        }
+
+        h2.section-title {
+            color: #dfdfdf;
+            margin-bottom: 30px;
+            font-size: 38px;
+
+            @include md {
+                font-size: var(--fs-h2);
+            }
+        }
+
+        .btn-custom-1 {
+            background: var(--white);
+            color: var(--secondary-clr);
+            font-family: var(--font-primary);
+
+            &:hover {
+                color: var(--white);
+            }
+
+            @include xxs {
+                line-height: 38px;
+            }
+        }
+    }
+}
+
+.feedback-slider-container {
+    position: relative;
+}
+
+.single-feedback-container {
+    padding-top: 70px;
+}
+
+.single-feedback {
+    background: #e7e7e7;
+    text-align: center;
+    border-radius: 20px;
+    position: relative;
+    color: #41464b;
+    padding: 30px;
+    padding-top: 100px;
+
+    @include sm {
+        padding: 45px 25px;
+        padding-top: 100px;
+    }
+
+    @include xs {
+        padding: 45px 20px;
+        padding-top: 100px;
+    }
+
+    @include xxs {
+        padding: 45px 15px;
+        padding-top: 80px;
+    }
+
+    &__user {
+        position: absolute;
+        width: 145px;
+        height: 145px;
+        top: -70px;
+        left: 50%;
+        translate: -50%;
+        border-radius: 50%;
+        outline: 1px solid #fff;
+        outline-offset: -10px;
+
+        @include xxs {
+            width: 125px;
+            height: 125px;
+        }
+    }
+
+    &__txt {
+        font-size: 20px;
+        line-height: 35px;
+        font-weight: 400;
+        position: relative;
+        margin-bottom: 20px;
+        padding-bottom: 70px;
+
+        @include sm {
+            font-size: 18px;
+        }
+
+        @include xs {
+            font-size: 16px;
+        }
+
+        @include xxs {
+            font-size: 14px;
+        }
+
+        &::before {
+            @include before;
+            background: linear-gradient(to right, #6c757d 35%, rgba(0, 128, 0, 0) 25%, rgba(0, 128, 0, 0) 65%, #6c757d 50%);
+            height: 1px;
+            bottom: 20px;
+            top: auto;
+            width: 200px;
+            left: 50%;
+            translate: -50%;
+            z-index: 0;
+        }
+
+        &::after {
+            @include before;
+            background: url(../img/icon/leaf-icon.png) no-repeat center center;
+            background-size: 40px;
+            bottom: 0;
+            top: auto;
+            width: 60px;
+            height: 48px;
+            left: 50%;
+            translate: -50%;
+            // filter: brightness(0) invert(1);
+        }
+    }
+
+    &__name {
+        text-transform: capitalize;
+        font-family: var(--font-3);
+        color: var(--secondary-clr);
+
+        @include xs {
+            font-size: 20px;
+        }
+    }
+
+    .label {
+        text-transform: capitalize;
+        font-family: var(--font-secondary);
+        font-weight: 400;
+        color: #41464b;
+
+        @include xs {
+            font-size: 15px;
+        }
+    }
+}
+
+.feedback-slider__navs {
+    position: absolute;
+    right: -15px;
+    background: #539d5a;
+    padding: 15px 8px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    top: 58%;
+    translate: 0 -50%;
+    border-radius: 10px;
+
+    @include xs {
+        right: -10px;
+    }
+
+    .feedback-slider__nav-btns {
+        border-radius: 50%;
+        border: 1px solid #fff;
+        width: 14px;
+        height: 14px;
+        @include gradient-primary-y;
+        padding: 0;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            background: #fff;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: var(--transition);
+            width: 0;
+            height: 0;
+        }
+
+        &.tns-nav-active {
+            &::before {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+/*-----------------------------------------------DEFAULT STLYES-----------------------------------------------*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    background: #3b3c42;
+    color: var(--white);
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+textarea {
+    display: block;
+}
+
+button {
+    border: none;
+}
+
+.bg-defaults {
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section-spacing {
+    padding: 120px 0;
+
+    @include sm {
+        padding: 60px 0;
+    }
+}
+
+.sticky {
+    position: fixed;
+    z-index: 111;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 1s ease;
+    padding: 0;
+    background: #fff;
+    @include md {
+        padding: 10px 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}

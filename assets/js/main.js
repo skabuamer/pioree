@@ -26,46 +26,20 @@
 //     once: true,
 // });
 
-const swiper = new Swiper(".swiper", {
-    // Optional parameters
-    direction: "horizontal",
-    loop: true,
-    mousewheel: true,
+/*----- GLASS BG MARGIN JS STARTS HERE -----*/
+const containers = document.querySelectorAll(".container");
+const glassBgs = document.querySelectorAll(".content-bg");
+const glassBgs2 = document.querySelectorAll(".content-bg-2");
 
-    // If we need pagination
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
+containers.forEach((container) => {
+    glassBgs.forEach((glassBg) => {
+        glassBg.style.paddingLeft = container.getBoundingClientRect().left + 12 + "px";
+        glassBg.style.marginLeft = -(container.getBoundingClientRect().left + 12) + "px";
+    });
 
-    // Navigation arrows
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: ".swiper-scrollbar",
-    },
-});
-
-// $(document).ready(function () {
-// });
-
-$(function () {
-    $(".owl-carousel").owlCarousel({
-        items: 1,
-        // nav: true,
-        loop: true,
+    glassBgs2.forEach((glassBg) => {
+        glassBg.style.paddingRight = container.getBoundingClientRect().left + 12 + "px";
+        glassBg.style.marginRight = -(container.getBoundingClientRect().left + 12) + "px";
     });
 });
-
-$(".owl-carousel").on("mousewheel", ".owl-stage", function (e) {
-    if (e.deltaY > 0) {
-        $(".owl-carousel").trigger("next.owl");
-    } else {
-        $(".owl-carousel").trigger("prev.owl");
-    }
-    e.preventDefault();
-});
+/*----- GLASS BG MARGIN JS ENDS HERE -----*/

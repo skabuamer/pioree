@@ -2,22 +2,7 @@
 .hero-section {
     padding: 120px 0;
 
-    .hero-txt {
-        text-align: center;
-    }
-
-    .hero__img {
-        position: relative;
-        width: 200px;
-        height: 200px;
-        border-radius: 30% 70% 68% 32% / 20% 30% 70% 80%;
-        overflow: hidden;
-        background-color: deeppink;
-
-        &::before {
-            position: absolute;
-            content: "";
-            inset: 0;
-        }
+    img {
+        width: 430px;
     }
 }

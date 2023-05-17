@@ -27,6 +27,8 @@ Table of Content
 /*-----------------------------------------------CUSTOM PROPERTIES-----------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Titillium+Web:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap");
 :root {
   --primary-clr: #519c5b;
   --secondary-clr: #2b5c3f;
@@ -42,6 +44,8 @@ Table of Content
   --font-primary: "Titillium Web", sans-serif;
   --font-secondary: "Roboto", sans-serif;
   --font-3: "Raleway", sans-serif;
+  --cairo: "Cairo", sans-serif;
+  --rajdhani: "Rajdhani", sans-serif;
   --fs-xl: 70px;
   --fs-h2: 35px;
   --fs-h3: 30px;
@@ -221,7 +225,6 @@ button {
   backdrop-filter: blur(12px);
   border-radius: 3000px 0 0 3000px;
   overflow: hidden;
-  height: 500px;
 }
 
 /*---------- GLASSMORPHISM BG ----------*/
@@ -454,10 +457,9 @@ button {
 /*----------SECTION HEADING STLYES START----------*/
 .section-heading {
   text-align: center;
-  position: relative;
+  position: sticky;
+  top: 10px;
   font-family: var(--font-secondary);
-  padding-bottom: 60px;
-  margin-bottom: 80px;
 }
 @media screen and (max-width: 575px) {
   .section-heading {
@@ -467,7 +469,6 @@ button {
 }
 .section-heading::before {
   position: absolute;
-  content: "";
   top: 100%;
   left: 50%;
   translate: -50% 0;
@@ -477,7 +478,6 @@ button {
 }
 .section-heading::after {
   position: absolute;
-  content: "";
   top: calc(100% - 25px);
   left: 50%;
   translate: -50% 0;
@@ -497,17 +497,26 @@ span.section-subtitle {
   margin-top: -5px;
 }
 
-h2.section-title {
-  text-transform: capitalize;
-  margin-bottom: 0;
-  letter-spacing: 1px;
-  color: #44504a;
+.section-title {
+  text-transform: uppercase;
+  color: #898989;
+  font-family: var(--rajdhani);
+  font-weight: 700;
+  writing-mode: vertical-lr;
+  scale: -1;
+  line-height: 1;
+  font-size: 135px;
+  position: absolute;
+  right: 100%;
+  margin: 0;
+  -webkit-text-fill-color: #3b3c42;
+  -webkit-text-stroke: 1px #787878;
 }
 @media screen and (max-width: 991px) {
-  h2.section-title {
+  .section-title {
     font-weight: 600;
   }
-  h2.section-title br {
+  .section-title br {
     display: none;
   }
 }
@@ -735,18 +744,27 @@ input#search:focus {
 }
 /*-----------------------------------------------HEADER STLYES-----------------------------------------------*/
 header {
-  background: #f8f8f8;
-  box-shadow: 0px -10px 20px 0px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 11;
+  padding: 40px 0 0;
 }
 @media screen and (max-width: 991px) {
   header {
     padding: 10px 0;
   }
 }
+header .content-bg-2 {
+  padding: 10px 30px;
+}
 header .offcanvas-body {
   align-items: center;
+}
+
+.header-nav {
+  gap: 30px;
+}
+.header-nav .nav-link {
+  text-transform: capitalize;
 }
 
 @media screen and (max-width: 991px) {
@@ -1171,6 +1189,10 @@ header .offcanvas-body {
 /*-----------------------------------------------ABOUT STLYES-----------------------------------------------*/
 .about-section {
   padding-bottom: 120px;
+}
+.about-section .content-bg-2 {
+  overflow: visible;
+  position: relative;
 }
 
 /*-----------------------------------------------CTA STLYES-----------------------------------------------*/

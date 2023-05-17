@@ -1,16 +1,26 @@
 /*-----------------------------------------------HEADER STLYES-----------------------------------------------*/
 header {
-    background: #f8f8f8;
-    box-shadow: 0px -10px 20px 0px rgb(0 0 0 / 30%);
     position: relative;
     z-index: 11;
+    padding: 40px 0 0;
 
     @include md {
         padding: 10px 0;
     }
 
+    .content-bg-2 {
+        padding: 10px 30px;
+    }
+
     .offcanvas-body {
         align-items: center;
+    }
+}
+
+.header-nav {
+    gap: 30px;
+    .nav-link {
+        text-transform: capitalize;
     }
 }
 

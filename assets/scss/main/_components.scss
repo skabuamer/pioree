@@ -17,7 +17,7 @@
     // border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 3000px 0 0 3000px;
     overflow: hidden;
-    height: 500px;
+    // height: 500px;
 }
 /*---------- GLASSMORPHISM BG ----------*/
 
@@ -251,10 +251,11 @@
 /*----------SECTION HEADING STLYES START----------*/
 .section-heading {
     text-align: center;
-    position: relative;
+    position: sticky;
+    top: 10px;
     font-family: var(--font-secondary);
-    padding-bottom: 60px;
-    margin-bottom: calc(20px + 60px);
+    // padding-bottom: 60px;
+    // margin-bottom: calc(20px + 60px);
 
     @include xs {
         margin-bottom: 55px;
@@ -263,7 +264,7 @@
 
     &::before {
         position: absolute;
-        content: "";
+        // content: "";
         top: 100%;
         left: 50%;
         translate: -50% 0;
@@ -274,7 +275,7 @@
 
     &::after {
         position: absolute;
-        content: "";
+        // content: "";
         top: calc(100% + -25px);
         left: 50%;
         translate: -50% 0;
@@ -295,11 +296,20 @@ span.section-subtitle {
     margin-top: -5px;
 }
 
-h2.section-title {
-    text-transform: capitalize;
-    margin-bottom: 0;
-    letter-spacing: 1px;
-    color: #44504a;
+.section-title {
+    text-transform: uppercase;
+    color: #898989;
+    font-family: var(--rajdhani);
+    font-weight: 700;
+    writing-mode: vertical-lr;
+    scale: -1;
+    line-height: 1;
+    font-size: 135px;
+    position: absolute;
+    right: 100%;
+    margin: 0;
+    -webkit-text-fill-color: #3b3c42;
+    -webkit-text-stroke: 1px #787878;
 
     @include md {
         font-weight: 600;

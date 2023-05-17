@@ -1,12 +1,16 @@
 /*-----------------------------------------------Typography-----------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Titillium+Web:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap");
 
 :root {
     /* --- Fonts --- */
     --font-primary: "Titillium Web", sans-serif;
     --font-secondary: "Roboto", sans-serif;
     --font-3: "Raleway", sans-serif;
+    --cairo: "Cairo", sans-serif;
+    --rajdhani: "Rajdhani", sans-serif;
     --fs-xl: 70px;
     --fs-h2: 35px;
     --fs-h3: 30px;
